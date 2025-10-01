@@ -5,7 +5,7 @@ import router from "./routes/user.routes.js";
 import router2 from "./routes/ufdrfile.route.js";
 const app = express();
 app.use(cors({
-    origin: [`http://localhost:5173`,`${process.env.frontend}`],
+    origin: [`http://localhost:5173`,`${process.env.APP_BASE_URL}`],
     credentials: true,
     methods: ["GET", "POST","PUT","DELETE"],}));
 app.use(express.json());
