@@ -11,6 +11,7 @@ import { jsonrepair } from 'jsonrepair';
 export const uploadUfdrFile = async (req, res) => {
     
    const tempFilePath = req.file.buffer;
+   console.log(tempFilePath);
    const user = req.user._id;
     try {
         if (!req.file) {
