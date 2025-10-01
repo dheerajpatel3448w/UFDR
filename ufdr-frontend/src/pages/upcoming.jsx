@@ -18,14 +18,20 @@ import {
   LinkIcon,
   DocumentTextIcon,
   VideoCameraIcon,
-  MicrophoneIcon
+  MicrophoneIcon,
+  FolderIcon,
+  KeyIcon,
+  DocumentCheckIcon,
+  ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 
 const UpcomingFeatures = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  // eslint-disable-next-line no-unused-vars
   const [hoveredFeature, setHoveredFeature] = useState(null);
 
   const features = [
+    // Search & Intelligence
     {
       id: 1,
       category: 'search',
@@ -41,7 +47,7 @@ const UpcomingFeatures = () => {
       title: 'Hybrid Search',
       description: 'Combines keyword and semantic search for more accurate results.',
       icon: CubeIcon,
-      status: 'planned',
+      status: 'in-development',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -80,6 +86,8 @@ const UpcomingFeatures = () => {
       status: 'in-development',
       color: 'from-indigo-500 to-blue-500'
     },
+
+    // Visualization & Analytics
     {
       id: 7,
       category: 'visualization',
@@ -134,6 +142,8 @@ const UpcomingFeatures = () => {
       status: 'in-development',
       color: 'from-cyan-500 to-blue-500'
     },
+
+    // Advanced Case Management
     {
       id: 13,
       category: 'case-management',
@@ -148,7 +158,7 @@ const UpcomingFeatures = () => {
       category: 'case-management',
       title: 'Role-Based Access Control',
       description: 'Assign roles like Investigator, Supervisor, or Admin for secure access.',
-      icon: UserGroupIcon,
+      icon: KeyIcon,
       status: 'planned',
       color: 'from-slate-500 to-gray-500'
     },
@@ -157,7 +167,7 @@ const UpcomingFeatures = () => {
       category: 'case-management',
       title: 'Audit Logs',
       description: 'Track who accessed or modified data for accountability.',
-      icon: DocumentTextIcon,
+      icon: DocumentCheckIcon,
       status: 'planned',
       color: 'from-orange-500 to-amber-500'
     },
@@ -188,6 +198,8 @@ const UpcomingFeatures = () => {
       status: 'planned',
       color: 'from-red-500 to-pink-500'
     },
+
+    // AI-Powered Intelligence
     {
       id: 19,
       category: 'ai-intelligence',
@@ -203,7 +215,7 @@ const UpcomingFeatures = () => {
       title: 'Query-to-DB Converter',
       description: 'Automatically generates database queries from user input.',
       icon: SparklesIcon,
-      status: 'planned',
+      status: 'in-development',
       color: 'from-cyan-500 to-blue-500'
     },
     {
@@ -220,7 +232,7 @@ const UpcomingFeatures = () => {
       category: 'ai-intelligence',
       title: 'Fraud & Scam Detection',
       description: 'Automatically flags cryptocurrency addresses, scam keywords, and fraudulent activity.',
-      icon: ShieldCheckIcon,
+      icon: ExclamationTriangleIcon,
       status: 'planned',
       color: 'from-red-500 to-rose-500'
     },
@@ -242,13 +254,15 @@ const UpcomingFeatures = () => {
       status: 'in-development',
       color: 'from-blue-500 to-cyan-500'
     },
+
+    // Data & File Intelligence
     {
       id: 25,
       category: 'data-intelligence',
       title: 'Metadata Extraction',
       description: 'Extract device and file information, including hash values.',
       icon: DocumentTextIcon,
-      status: 'planned',
+      status: 'in-development',
       color: 'from-gray-500 to-slate-500'
     },
     {
@@ -265,7 +279,7 @@ const UpcomingFeatures = () => {
       category: 'data-intelligence',
       title: 'Smart File Search',
       description: 'Search files by name, type, size, or extension.',
-      icon: MagnifyingGlassIcon,
+      icon: FolderIcon,
       status: 'planned',
       color: 'from-blue-500 to-indigo-500'
     },
@@ -351,12 +365,12 @@ const UpcomingFeatures = () => {
               <SparklesIcon className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-5xl font-bold text-white">
-              Upcoming Features
+              UFDR AI Tool Analyzer
             </h1>
           </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the next generation of digital forensics intelligence. 
-            We're building powerful AI-driven tools to revolutionize your investigative workflow.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Advanced investigation platform that leverages AI and intelligent search to analyze device forensic data (UFDR files) efficiently. 
+            Provides investigators with deep insights, automated intelligence, and visualization to streamline case management.
           </p>
         </motion.div>
 
@@ -490,7 +504,7 @@ const UpcomingFeatures = () => {
         >
           <div className="inline-flex items-center gap-2 text-white/60">
             <SparklesIcon className="h-5 w-5" />
-            <span className="text-lg">More revolutionary features coming soon</span>
+            <span className="text-lg">Revolutionizing Digital Forensics with AI Intelligence</span>
             <SparklesIcon className="h-5 w-5" />
           </div>
         </motion.div>
