@@ -362,16 +362,7 @@ const Navbar = () => {
 
             <div className="relative z-10 px-4 py-6 space-y-3">
               {/* Mobile Search */}
-              <div className="relative mb-4">
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400">
-                  <Search className="w-4 h-4" />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Search UFDR data..."
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-black/30 border border-cyan-500/30 text-white placeholder-cyan-200/60 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-400 backdrop-blur-sm"
-                />
-              </div>
+             
               
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -388,6 +379,7 @@ const Navbar = () => {
                     onClick={() => {
                       setActiveLink(item.id);
                       setIsMobileMenuOpen(false);
+                      navigate(`/${item.name}`)
                     }}
                     whileHover={{ x: 8 }}
                     whileTap={{ scale: 0.95 }}
@@ -419,10 +411,12 @@ const Navbar = () => {
                   className="w-full justify-center"
                   onClick={() => {
                     setActiveLink('upload');
+                    
                     setIsMobileMenuOpen(false);
+                    navigate('/analysis')
                   }}
                 >
-                  <Upload className="w-4 h-4 mr-2"  />
+                  <Upload className="w-4 h-4 mr-2"/>
                   Start Analysis
                 </Button>
               </div>
