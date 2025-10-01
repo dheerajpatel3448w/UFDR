@@ -8,7 +8,7 @@ import { UFDRReport } from '../models/ufdrReport.model.js';
 
 export const  process_ufdr_file= async(file,case_number,investigator,title,description,user) => {
 
-const dataProcessor =  fs.readFileSync(path.resolve(file), 'utf-8');
+const dataProcessor =  file.toString('utf-8');
 const data = JSON.parse(dataProcessor);
 
 const ufdrReport = await UFDRReport.create({

@@ -10,7 +10,7 @@ import { report } from 'process';
 import { jsonrepair } from 'jsonrepair';
 export const uploadUfdrFile = async (req, res) => {
     
-   const tempFilePath = req.file.path;
+   const tempFilePath = req.file.buffer;
    const user = req.user._id;
     try {
         if (!req.file) {
