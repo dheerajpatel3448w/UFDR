@@ -50,9 +50,10 @@ const responce = await axios.post(`${import.meta.env.VITE_API_URL}/ufdr/uploaduf
 })
 
       console.log('Form submitted:', responce.data);
+      alert('upload successfully')
       setIsSubmitted(true);
       toast.success('Form submitted successfully!');
-      
+      reset();
       // Reset form after 3 seconds
       setTimeout(() => {
         reset();
@@ -63,6 +64,7 @@ const responce = await axios.post(`${import.meta.env.VITE_API_URL}/ufdr/uploaduf
       toast.error('Error submitting form');
     } finally {
       setIsSubmitting(false);
+      reset();
     }
   };
 
