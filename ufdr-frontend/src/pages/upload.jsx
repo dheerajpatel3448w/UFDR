@@ -219,12 +219,12 @@ const responce = await axios.post(`${import.meta.env.VITE_API_URL}/ufdr/uploaduf
                           id="file"
                           onChange={handleFileChange}
                           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                          accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.json"
+                          accept=".json"
                         />
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors duration-200">
                           <FiUpload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
                           <p className="text-gray-600 mb-2">Click to upload or drag and drop</p>
-                          <p className="text-sm text-gray-500">PDF, DOC, JPG, PNG (Max. 5MB)</p>
+                          <p className="text-sm text-gray-500">.json (Max. 5MB)</p>
                         </div>
                       </motion.div>
                     ) : (
