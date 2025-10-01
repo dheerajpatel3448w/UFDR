@@ -77,7 +77,10 @@ function Ufdrchatbot() {
       })
       
       if (response.data.success) {
+        if(response.data.result['value'])
         setResult(response.data.result.value)
+      else
+          setResult(response.data.result)
         setStructure(true)
         setIsRaw2(true)
         setIsRaw3(true)

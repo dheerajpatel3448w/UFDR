@@ -61,7 +61,7 @@ export const queryresolver = async(req,res) => {
         if(!result){
             return res.status(500).json({ detail: `Error classifying the query` });
         }
-    if(result.value === "normal"){
+    
         const result2 = JSON.parse(await normalquery(result.schema,query,ufdrId));
         if(!result2){
             return res.status(500).json({ detail: `Error processing the query` });
@@ -83,14 +83,13 @@ console.log(result_data2);
 
 
         return res.status(200).json({ result: result_data2, message: "Query processed successfully", success: true });
-    }
+    
 
 
 
 
 
 
-        return res.status(200).json({ message: "Query processed successfully", success: true });
     
 
   

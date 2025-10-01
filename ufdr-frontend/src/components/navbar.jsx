@@ -50,7 +50,7 @@ const Navbar = () => {
     { name: 'upload', label: 'Upload File', icon: Upload },
     { name: 'analysis', label: 'Analysis', icon: Activity },
     { name: 'upcoming', label: 'Upcoming Features ', icon: User },
-    {name: 'contact', label: 'Contact', icon: Phone },
+    
    
   ];
   const navigate = useNavigate();

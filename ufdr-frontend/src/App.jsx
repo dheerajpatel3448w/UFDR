@@ -12,6 +12,7 @@ import UFDRReportsPage from './pages/ufdrfiles'
 import Userprotectroute from './components/userprotectroute'
 import Ufdrchatbot from './pages/ufdrchatbot'
 import UpcomingFeatures from './pages/upcoming'
+import Homepage from './pages/homepage'
 function App() {
   const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ function App() {
       path:"/analysis2",
       element:<Userprotectroute><Ufdrchatbot/></Userprotectroute>
 
+    },
+    {
+      path:'/',
+      element:<Homepage/>
     },
     {
       path:'/upcoming',
