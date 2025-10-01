@@ -45,7 +45,7 @@ const responce = await axios.post(`${import.meta.env.VITE_API_URL}/ufdr/uploaduf
     withCredentials: true,
     headers: {
       'Content-Type': 'multipart/form-data',
-      Authorization: `Bearer ${localStorage.getItem('token')}`
+      Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`
     },
 })
 
