@@ -1,0 +1,10 @@
+import { Router } from "express";
+import upload from "../middlewares/multer.middleware.js";
+import { getallreport, queryresolver, uploadUfdrFile ,queryresolver2} from "../controllers/ufdrfile.controller.js";
+import { verifyToken } from "../middlewares/user.middleware.js";
+const router2 = Router();
+ router2.route("/uploadufdr").post(verifyToken,upload.single('file'),uploadUfdrFile);
+router2.route("/query").post(verifyToken,queryresolver);
+router2.route('/getreports').get(verifyToken,getallreport);
+router2.route('/query2').post(verifyToken,queryresolver2);
+export default router2;
